@@ -22,4 +22,13 @@ Comprehensive features:
 
 9. All HTML is fully validated by W3C
 
-![alt_text, width="400"](/Slide1.JPG)
+Example webpages:
+![alt_text, width="200"](/Slide1.JPG)
+
+ESP8266 Wiring:
+![alt_text, width="200"](/Slide6.JPG)
+
+ESP32 Wiring:
+![alt_text, width="200"](/Slide7.JPG)
+
+
