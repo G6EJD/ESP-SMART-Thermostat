@@ -21,3 +21,5 @@ Comprehensive features:
 8. Use as a simple ON/OFF timer
 
 9. All HTML is fully validated by W3C
+
+![alt_text, width="400"](/Slide1.jpg)
