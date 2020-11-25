@@ -22,4 +22,4 @@ Comprehensive features:
 
 9. All HTML is fully validated by W3C
 
-![alt_text, width="400"](/Slide1.jpg)
+![alt_text, width="400"](/Slide1.JPG)
