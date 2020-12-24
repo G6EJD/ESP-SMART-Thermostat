@@ -19,7 +19,7 @@
 #include <WiFi.h>                      // Built-in
 #include <ESPmDNS.h>                   // Built-in
 #include <SPIFFS.h>                    // Built-in
-#include "ESPAsyncWebServer.h"         // Built-in
+#include "ESPAsyncWebServer.h"         // https://github.com/me-no-dev/ESPAsyncWebServer/tree/63b5303880023f17e1bca517ac593d8a33955e94
 #include <Adafruit_Sensor.h>           // Adafruit sensor
 #include <Adafruit_BME280.h>           // For BME280 support
 Adafruit_BME280 sensor;                // I2C mode
