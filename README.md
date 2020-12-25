@@ -5,6 +5,9 @@ An ESP implementation of a smart thermostat or simple ON/OFF timer
 
 Access via logical name e.g. http://thermostat.local/
 
+For ESP8266 it requires ESPAsyncTCP To use this library you might need to have the latest git versions of ESP8266 Arduino Core
+For ESP32 it requires AsyncTCP to work To use this library you might need to have the latest git versions of ESP32 Arduino Core
+
 Comprehensive features:
 1. 7-Day timer and 4 target temperature periods per-day, all adjustable
 
