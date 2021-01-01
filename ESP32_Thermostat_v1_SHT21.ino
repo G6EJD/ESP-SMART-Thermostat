@@ -20,6 +20,7 @@
 #include <ESPmDNS.h>                   // Built-in
 #include <SPIFFS.h>                    // Built-in
 #include "ESPAsyncWebServer.h"         // Built-in
+#include "AsyncTCP.h"                  // https://github.com/me-no-dev/AsyncTCP
 #include <Wire.h>
 #include "Adafruit_HTU21DF.h"
 Adafruit_HTU21DF htu = Adafruit_HTU21DF();
