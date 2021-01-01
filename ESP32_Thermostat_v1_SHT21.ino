@@ -601,7 +601,7 @@ void append_HTML_header(bool refreshMode) {
   webpage += "                  display:inline-flex;justify-content:center;align-items:center;}";
   webpage += ".wifi            {padding:3px;position:relative;top:1em;left:0.36em;}";
   webpage += ".wifi, .wifi:before {display:inline-block;border:9px double transparent;border-top-color:currentColor;border-radius:50%;}";
-  webpage += ".wifi:before     {content:'';width:0;height:0;";
+  webpage += ".wifi:before     {content:'';width:0;height:0;}";
   webpage += "</style></head>";
   webpage += "<body>";
   webpage += "<div class='topnav'>";
