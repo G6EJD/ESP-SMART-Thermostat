@@ -22,6 +22,7 @@
 #include <LittleFS.h>                  // Built-in
 #include <time.h>                      // Built-in
 #include "ESPAsyncWebServer.h"         // Built-in
+#include "ESPAsyncTCP.h"               // https://github.com/me-no-dev/ESPAsyncTCP
 #include <Adafruit_Sensor.h>           // Adafruit sensor
 #include <Adafruit_BME280.h>           // For BME280 support
 Adafruit_BME280 sensor;                // I2C mode
