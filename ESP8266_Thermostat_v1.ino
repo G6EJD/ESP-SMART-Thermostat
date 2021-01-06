@@ -109,7 +109,6 @@ String Units                = "M";        // or Units = "I" for °F and 12:12pm 
 String webpage              = "";         // General purpose variable to hold HTML code for display
 int    TimerCheckDuration   = 5000;       // Check for timer event every 5-seconds
 int    LastReadingDuration  = 1;          // Add sensor reading every n-mins
-int    wifi_signal          = 0;          // WiFi signal strength
 int    LastTimerSwitchCheck = 0;          // Counter for last timer check
 int    LastReadingCheck     = 0;          // Counter for last reading saved check
 float  LastTemperature      = 0;          // Last temperature used for rogue reading detection
