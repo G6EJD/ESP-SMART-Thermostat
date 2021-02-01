@@ -205,14 +205,14 @@ void setup() {
 }
 //#########################################################################################
 void loop() {
-  if (millis() > LastTimerSwitchCheck) {
-    LastTimerSwitchCheck = millis() + TimerCheckDuration;          // Check at time-out for a change
-    ReadSensor();                                                  // Get sensor readings, or simulated values if 'simulated' is ON
-    UpdateLocalTime();                                             // Updates Time UnixTime to 'now'
-    CheckTimerEvent();                                             // Check for schedules actuated
+  if ((millis() - LastTimerSwitchCheck) > TimerCheckDuration) {
+    LastTimerSwitchCheck = millis();                      // Reset time
+    ReadSensor();                                         // Get sensor readings, or get simulated values if 'simulated' is ON
+    UpdateLocalTime();                                    // Updates Time UnixTime to 'now'
+    CheckTimerEvent();                                    // Check for schedules actuated
   }
-  if (millis() > LastReadingCheck) {
-    LastReadingCheck = millis() + LastReadingDuration * 60 * 1000; // Update reading record every ~n-mins e.g. 60,000uS = 1-min
+  if ((millis() - LastReadingCheck) > (LastReadingDuration * 60 * 1000)) {
+    LastReadingCheck = millis();                          // Update reading record every ~n-mins e.g. 60,000uS = 1-min
     AssignSensorReadingsToArray();
   }
 }
