@@ -108,9 +108,9 @@ String Units                = "M";        // or Units = "I" for °F and 12:12pm 
 
 String webpage              = "";         // General purpose variable to hold HTML code for display
 int    TimerCheckDuration   = 5000;       // Check for timer event every 5-seconds
-int    LastReadingDuration  = 1;          // Add sensor reading every n-mins
-int    LastTimerSwitchCheck = 0;          // Counter for last timer check
-int    LastReadingCheck     = 0;          // Counter for last reading saved check
+long   LastReadingDuration  = 1;          // Add sensor reading every n-mins
+long   LastTimerSwitchCheck = 0;          // Counter for last timer check
+long   LastReadingCheck     = 0;          // Counter for last reading saved check
 float  LastTemperature      = 0;          // Last temperature used for rogue reading detection
 int    UnixTime             = 0;          // Time now (when updated) of the current time
 
@@ -207,14 +207,14 @@ void setup() {
 }
 //#########################################################################################
 void loop() {
-  if (millis() > LastTimerSwitchCheck) {
-    LastTimerSwitchCheck = millis() + TimerCheckDuration;          // Check at time-out for a change
-    ReadSensor();                                                  // Get sensor readings, or get simulated values if 'simulated' is ON
-    UpdateLocalTime();                                             // Updates Time UnixTime to 'now'
-    CheckTimerEvent();                                             // Check for schedules actuated
+  if ((millis() - LastTimerSwitchCheck) > TimerCheckDuration) {
+    LastTimerSwitchCheck = millis();                      // Reset time
+    ReadSensor();                                         // Get sensor readings, or get simulated values if 'simulated' is ON
+    UpdateLocalTime();                                    // Updates Time UnixTime to 'now'
+    CheckTimerEvent();                                    // Check for schedules actuated
   }
-  if (millis() > LastReadingCheck) {
-    LastReadingCheck = millis() + LastReadingDuration * 60 * 1000; // Update reading record every ~n-mins e.g. 60,000uS = 1-min
+  if ((millis() - LastReadingCheck) > (LastReadingDuration * 60 * 1000)) {
+    LastReadingCheck = millis();                          // Update reading record every ~n-mins e.g. 60,000uS = 1-min
     AssignSensorReadingsToArray();
   }
 }
