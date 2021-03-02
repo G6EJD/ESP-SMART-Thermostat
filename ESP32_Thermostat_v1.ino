@@ -727,7 +727,7 @@ void SaveSettings() {
         dataFile.println(Timer[dow].Temp[p]);
         dataFile.println(Timer[dow].Start[p]);
         dataFile.println(Timer[dow].Stop[p]);
-        Serial.println("Period: " + String(p) + " " + Timer[dow].Temp[p] + " frpm: " + Timer[dow].Start[p] + " to: " + Timer[dow].Stop[p]);
+        Serial.println("Period: " + String(p) + " " + Timer[dow].Temp[p] + " from: " + Timer[dow].Start[p] + " to: " + Timer[dow].Stop[p]);
       }
     }
     dataFile.println(Hysteresis, 1);
@@ -754,7 +754,7 @@ void RecoverSettings() {
           Timer[dow].Temp[p]  = dataFile.readStringUntil('\n'); Timer[dow].Temp[p].trim();
           Timer[dow].Start[p] = dataFile.readStringUntil('\n'); Timer[dow].Start[p].trim();
           Timer[dow].Stop[p]  = dataFile.readStringUntil('\n'); Timer[dow].Stop[p].trim();
-          Serial.println("Period: " + String(p) + " " + Timer[dow].Temp[p] + " frpm: " + Timer[dow].Start[p] + " to: " + Timer[dow].Stop[p]);
+          Serial.println("Period: " + String(p) + " " + Timer[dow].Temp[p] + " from: " + Timer[dow].Start[p] + " to: " + Timer[dow].Stop[p]);
         }
       }
       Entry = dataFile.readStringUntil('\n'); Entry.trim(); Hysteresis = Entry.toFloat();
