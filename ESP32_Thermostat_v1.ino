@@ -158,7 +158,7 @@ void setup() {
   // Set handler for '/handletimer' inputs
   server.on("/handletimer", HTTP_GET, [](AsyncWebServerRequest * request) {
     for (byte dow = 0; dow < 7; dow++) {
-      for (byte p = 0; p < 4; p++) {
+      for (byte p = 0; p < NumOfEvents; p++) {
         Timer[dow].Temp[p]  = request->arg(String(dow) + "." + String(p) + ".Temp");
         Timer[dow].Start[p] = request->arg(String(dow) + "." + String(p) + ".Start");
         Timer[dow].Stop[p]  = request->arg(String(dow) + "." + String(p) + ".Stop");
