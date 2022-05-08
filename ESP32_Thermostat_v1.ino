@@ -443,14 +443,17 @@ void CheckTimerEvent() {
     TargetTemp = ManOverrideTemp;                          // Set the target temperature to the manual overide temperature
     ControlHeating();                                      // Control the heating as normal
   }
-  for (byte dow = 0; dow < 7; dow++) {                     // Look for any valid timer events, if found turn the heating on
-    for (byte p = 0; p < NumOfEvents; p++) {
-      // Now check for a scheduled ON time, if so Switch the Timer ON and check the temperature against target temperature
-      if (String(dow) == DoW_str && (TimeNow >= Timer[dow].Start[p] && TimeNow <= Timer[dow].Stop[p] && Timer[dow].Start[p] != ""))
-      {
-        TimerState = "ON";
-        ControlHeating();
-        ManualOverride = OFF; // If it was ON turn it OFF when the timer starts a controlled period
+  else
+  {
+    for (byte dow = 0; dow < 7; dow++) {                     // Look for any valid timer events, if found turn the heating on
+      for (byte p = 0; p < NumOfEvents; p++) {
+        // Now check for a scheduled ON time, if so Switch the Timer ON and check the temperature against target temperature
+        if (String(dow) == DoW_str && (TimeNow >= Timer[dow].Start[p] && TimeNow <= Timer[dow].Stop[p] && Timer[dow].Start[p] != ""))
+        {
+          TimerState = "ON";
+          ControlHeating();
+          ManualOverride = OFF; // If it was ON turn it OFF when the timer starts a controlled period
+        }
       }
     }
   }
