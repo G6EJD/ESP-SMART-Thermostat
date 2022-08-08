@@ -99,10 +99,10 @@ const String data1Colour    = "red";
 const String data2Colour    = "orange";
 
 //################ VARIABLES ################
-const char* ssid       = "KUKI";             // WiFi SSID     replace with details for your local network
-const char* password   = "podmilscakova";         // WiFi Password replace with details for your local network
-const char* http_username = "sebo";
-const char* http_password = "sebo";
+const char* ssid       = "YOUR_SSID";             // WiFi SSID     replace with details for your local network
+const char* password   = "YOUR_PASSWORD";         // WiFi Password replace with details for your local network
+const char* http_username = "HTTP_USERNAME";
+const char* http_password = "HTTP_PASSWORD";
 const char* Timezone = "CET-1CEST,M3.5.0,M10.5.0/3";
 // Example time zones
 //const char* Timezone = "MET-1METDST,M3.5.0/01,M10.5.0/02"; // Most of Europe
