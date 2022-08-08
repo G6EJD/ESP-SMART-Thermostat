@@ -449,8 +449,8 @@ void Homepage() {
   }
   webpage += "<td>Calibrate <i style='color:red;' class='fas fa-temperature-high'></td>";
   webpage += "<td>Calibrate <i style='color:blue;' class='fas fa-water'></td>"; 
-  webpage += "<td><a style='text-decoration:none;' target='hidden' href='http://www.ihome.si:5959/relay/on'>I</a> <span class=" + String((RelayState3 == "ON" ? "'on'>" : "'off'>")) + "<i style='text-align:center;' class='fas fa-plug'></i></span> <a style='text-decoration:none;' target='hidden' href='http://www.ihome.si:5959/relay/off'>0</a></td>"; 
-  webpage += "<td><a style='text-decoration:none;' target='hidden' href='http://www.ihome.si:5959/relay1/on'>I</a> <span class=" + String((RelayState4 == "ON" ? "'on'>" : "'off'>")) + "<i style='text-align:center;' class='fas fa-lightbulb'></i></span> <a style='text-decoration:none;' target='hidden' href='http://www.ihome.si:5959/relay1/off'>0</a></td>"; 
+  webpage += "<td><a style='text-decoration:none;' target='hidden' href='your ip:port/relay/on'>I</a> <span class=" + String((RelayState3 == "ON" ? "'on'>" : "'off'>")) + "<i style='text-align:center;' class='fas fa-plug'></i></span> <a style='text-decoration:none;' target='hidden' href='yourip:port/relay/off'>0</a></td>"; 
+  webpage += "<td><a style='text-decoration:none;' target='hidden' href='your ip:port/relay1/on'>I</a> <span class=" + String((RelayState4 == "ON" ? "'on'>" : "'off'>")) + "<i style='text-align:center;' class='fas fa-lightbulb'></i></span> <a style='text-decoration:none;' target='hidden' href='yourip:port//relay1/off'>0</a></td>"; 
   webpage += "</tr>";
   webpage += "<tr>";
   webpage += "<td class='largeTemp'>" + String(Temperature, 1)       + "&deg;C</td>";
@@ -968,7 +968,7 @@ void append_HTML_header(bool refreshMode) {
   webpage += "<head>";
   webpage += "<meta name=\"theme-color\" content=\"#000000\"><meta name=\"msapplication-navbutton-color\" content=\"#000000\"><meta name=\"apple-mobile-web-app-capable\" content=\"yes\"><meta name=\"apple-mobile-web-app-status-bar-style\" content=\"#000000\">";
   webpage += "<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Audiowide'>";
-  webpage += "<link rel='icon' type='image/png' href='http://www.ihome.si:888/icon.png'>";
+  webpage += "<link rel='icon' type='image/png' href='yourip:port:port/icon.png'>";
   webpage += "<title>" + sitetitle + "</title>";
   webpage += "<meta charset='UTF-8'>";
   webpage += "<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.2/css/all.css' integrity='sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr' crossorigin='anonymous'>";
@@ -1040,7 +1040,7 @@ void append_HTML_header1(bool refreshMode) {
   webpage  = "<meta name='viewport' content='width=device-width, initial-scale=1'>";
   webpage += "<meta name=\"theme-color\" content=\"#000000\"><meta name=\"msapplication-navbutton-color\" content=\"#000000\"><meta name=\"apple-mobile-web-app-capable\" content=\"yes\"><meta name=\"apple-mobile-web-app-status-bar-style\" content=\"#000000\">";
   webpage += "<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Audiowide'>";
-  webpage += "<link rel='icon' type='image/png' href='http://www.ihome.si:888/icon.png'>";
+  webpage += "<link rel='icon' type='image/png' href='http://www..si:888/icon.png'>";
   webpage += "<title>" + sitetitle + "</title>";
   webpage += "<meta charset='UTF-8'>";
   webpage += "<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.2/css/all.css' integrity='sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr' crossorigin='anonymous'>";
