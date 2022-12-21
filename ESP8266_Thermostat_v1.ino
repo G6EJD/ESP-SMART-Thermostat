@@ -672,6 +672,7 @@ boolean SetupTime() {
     UpdateLocalTime();
     delay(200);
   }
+  return true;
 }
 //#########################################################################################
 void UpdateLocalTime() {
