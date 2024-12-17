@@ -644,8 +644,6 @@ void StartWiFi() {
   IPAddress dns(8, 8, 8, 8); // Use Google as DNS
   WiFi.disconnect();
   WiFi.mode(WIFI_STA);       // switch off AP
-  WiFi.setAutoConnect(true);
-  WiFi.setAutoReconnect(true);
   WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED) {
     Serial.print(".");
